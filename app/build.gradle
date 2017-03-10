@@ -1,0 +1,113 @@
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'com.neenbedankt.android-apt'
+
+def config = rootProject.ext.configuration
+def signing = rootProject.ext.signingDebug
+def libs = rootProject.ext.librarys
+
+android {
+    compileSdkVersion config.compileSdkVersion
+    buildToolsVersion config.buildToolsVersion
+
+    defaultConfig {
+        applicationId config.applicationId
+        minSdkVersion config.minSdkVersion
+        targetSdkVersion config.targetSdkVersion
+        versionCode config.versionCode
+        versionName config.versionName
+        multiDexEnabled = true
+
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "arm64-v8a", "x86"
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: "com.qhzk.ciep",
+                JPUSH_APPKEY : "bcf3443ddbeb9c99241733f7",
+                JPUSH_CHANNEL: "developer-default",
+        ]
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+
+        release {
+            minifyEnabled config.minifyEnabled
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+    }
+    //指定测试签名密钥
+    signingConfigs {
+        debug {
+            storeFile file(signing.storeFile)
+            storePassword signing.storePassword
+            keyAlias signing.keyAlias
+            keyPassword signing.keyPassword
+        }
+
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile("com.android.support.test.espresso:espresso-core:${libs.espresso_core}", {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile "junit:junit:${libs.junit}"
+
+    compile "com.android.support:appcompat-v7:${libs.support}"
+    compile "com.android.support:design:${libs.support}"
+    compile "com.android.support:cardview-v7:${libs.support}"
+
+    compile "io.reactivex:rxjava:${libs.rxjava}"
+    compile "io.reactivex:rxandroid:${libs.rxandroid}"
+
+    compile "com.google.code.gson:gson:${libs.gson}"
+    compile "com.squareup.okhttp3:okhttp:${libs.okhttp3}"
+    compile "com.squareup.retrofit2:retrofit:${libs.retrofit2}"
+    compile "com.squareup.retrofit2:converter-gson:${libs.retrofit2}"
+    compile "com.squareup.retrofit2:adapter-rxjava:${libs.retrofit2}"
+
+    apt "com.jakewharton:butterknife-compiler:${libs.butterknife}"
+    compile "com.jakewharton:butterknife:${libs.butterknife}"
+
+    compile "com.github.bumptech.glide:glide:${libs.glide}"
+    compile "com.github.bumptech.glide:okhttp3-integration:${libs.okhttp3_integration}"
+
+    compile "com.bigkoo:convenientbanner:${libs.banner}"
+
+    compile "com.github.CymChad:BaseRecyclerViewAdapterHelper:${libs.brvah}"
+    compile "com.afollestad.material-dialogs:core:${libs.material_dialogs}"
+    // 极光推送2.2.0
+    compile "cn.jiguang:jpush:${libs.jpush}"
+
+    //导入模块
+
+    compile project(':librarys:library_ijkplayer')
+    compile project(':librarys:library_pdfview')
+    compile project(':librarys:library_society')
+    compile project(':librarys:library_tbs')
+    compile project(':librarys:library_zxing')
+
+//    compile 'com.google.android.gms:play-services-appindexing:8.4.0'
+    //鸿洋 okhttputils
+    compile 'com.zhy:okhttputils:2.6.2'
+    // dialog工具
+//    compile 'com.orhanobut:dialogplus:1.11@aar'
+    // 城市选择
+    compile 'liji.library.dev:citypickerview:0.8.0'
+    // 下拉刷新
+    compile 'com.liaoinstan.springview:library:1.2.6'
+    //  PhotoView
+    compile 'com.github.chrisbanes.photoview:library:+'
+    // 内存泄漏检测
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+}

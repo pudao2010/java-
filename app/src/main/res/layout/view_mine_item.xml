@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+
+        <TextView
+            android:id="@+id/mine_star_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="*"
+            android:textColor="#ff2828"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/mine_itme_key"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@id/mine_star_5"
+            android:text="出生年月"
+            android:textColor="@color/color_text_color"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/mine_right_icon_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_chevron_right" />
+
+        <TextView
+            android:id="@+id/mine_item_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2dp"
+            android:layout_toLeftOf="@id/mine_right_icon_5"
+            android:text=""
+            android:textColor="#969696"
+            android:textSize="14sp" />
+    </RelativeLayout>
+    <ImageView
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/color_line_color"
+        android:layout_width="match_parent"
+        android:layout_height="2px" />
+</LinearLayout>

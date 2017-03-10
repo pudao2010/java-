@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ececec"
+        android:gravity="center_horizontal"
+        android:paddingBottom="12dp"
+        android:paddingTop="28dp">
+
+        <TextView
+            android:id="@+id/info_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1填写个人信息    >    2单位及学历    >    3选择板块"
+            android:textColor="#fa4646"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/info_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/info_1"
+            android:layout_below="@id/info_1"
+            android:layout_marginTop="24dp"
+            android:text="注 ：板块下会议及论坛都为多选项"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ExpandableListView
+            android:id="@+id/expand_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_selected"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_weight="1"
+            android:background="#E5E5E5"
+            android:textColor="#6FA8DE"
+            android:text="查看已选会议" />
+
+        <Button
+            android:id="@+id/btn_commit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/holo_red_light"
+            android:text="提交"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+</LinearLayout>

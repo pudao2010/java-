@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/video_footer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:background="#AA000000"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <ImageButton
+        android:id="@+id/button_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/icon_pause" />
+
+    <TextView
+        android:id="@+id/start_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:text="00:00"
+        android:textColor="@color/color_message_text_color"
+        android:textSize="10sp" />
+
+    <android.support.v7.widget.AppCompatSeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/totle_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="14dp"
+        android:text="00:00"
+        android:textColor="@color/color_message_text_color"
+        android:textSize="10sp" />
+
+    <ImageButton
+        android:background="@null"
+        android:id="@+id/button_fullscreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp" />
+
+</LinearLayout>

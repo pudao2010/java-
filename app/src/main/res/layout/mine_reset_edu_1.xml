@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.qhzk.ciep.widget.MineItemView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemKey="教育时间"
+        android:id="@+id/study_time"/>
+    <com.qhzk.ciep.widget.MineItemEdit
+        android:id="@+id/college"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemEditKey="学   校"
+        app:itemEditHint="请输入" />
+    <com.qhzk.ciep.widget.MineItemView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemKey="学   历"
+        android:id="@+id/degree"/>
+    <com.qhzk.ciep.widget.MineItemView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemKey="专   业"
+        android:id="@+id/major"/>
+    <com.qhzk.ciep.widget.MineItemEdit
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemEditKey="电子邮箱"
+        app:itemEditHint="请输入" />
+</merge>

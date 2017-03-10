@@ -1,0 +1,29 @@
+apply plugin: 'com.android.library'
+
+def config = rootProject.ext.configuration
+def libs = rootProject.ext.librarys
+
+android {
+    compileSdkVersion config.compileSdkVersion
+    buildToolsVersion config.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion config.minSdkVersion
+        targetSdkVersion config.targetSdkVersion
+        versionCode config.versionCode
+        versionName config.versionName
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled config.minifyEnabled
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile "io.reactivex:rxjava:${libs.rxjava}"
+    compile "io.reactivex:rxandroid:${libs.rxandroid}"
+}

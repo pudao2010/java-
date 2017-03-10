@@ -1,0 +1,12 @@
+// App 主模块
+include ':app'
+// App 社会化模块
+include ':librarys:library_society'
+// App ZXing模块
+include ':librarys:library_zxing'
+// App PDF模块
+include ':librarys:library_pdfview'
+// App PDF模块
+include ':librarys:library_tbs'
+// App 播放器模块
+include ':librarys:library_ijkplayer'

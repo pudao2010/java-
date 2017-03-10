@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15dp"
+    android:orientation="vertical"
+    android:padding="6dp">
+
+    <TextView
+        android:id="@+id/froumagenda_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="海外人才项目对接会"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/forumagenda_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="会展中心六层郁金香厅" />
+
+    <TextView
+        android:id="@+id/forumagenda_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="2017-4-15 09:00" />
+</LinearLayout>

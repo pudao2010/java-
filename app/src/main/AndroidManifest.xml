@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.qhzk.ciep">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- ShareSDK所需的权限 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".CiepApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.splash.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.FullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 主界面 -->
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.qrcode.QRcodeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.enterprise.PDFDisplayActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.enterprise.EnterpriseActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!-- 登陆界面使用singletop方式,因为注册页面可以启动登录页面 -->
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!-- 注册界面 -->
+        <activity
+            android:name=".ui.register.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!-- 注册成功界面 -->
+        <activity
+            android:name=".ui.register.RegisterSuccessActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.resetpasswd.ResetPasswdActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.mine.job.MineJobActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.mine.project.MineProjectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.mine.data.MineData1Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.mine.data.MineDataActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.mine.history.HistoryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.mine.attention.AttentionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.mine.meeting.MeetingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.mine.setting.SettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.mine.resume.MineResumeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.mine.resume.reset_data.MineResetDataActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.mine.resume.edu_exp.ResetWorkExpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <!-- 修改教育经历 -->
+        <activity
+            android:name=".ui.mine.resume.edu_exp.reset.ResetEduExpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.search.SearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.home.attend.AttendActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.home.new_center.NewCenterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.video.VideoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.generalIntroduction.GeneralIntroductionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.projectdock.ProjectDockActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!-- 新闻详情 -->
+        <activity
+            android:name=".ui.newsdetail.NewsDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!-- 人才对接 -->
+        <activity
+            android:name=".ui.talentdock.TalentDockActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!-- 数据统计 -->
+        <activity
+            android:name=".ui.datastatistics.DatastatisticsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!-- 大会版块的详细介绍 -->
+        <activity
+            android:name=".ui.plateinfo.PlateInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!-- 我的消息 -->
+        <activity
+            android:name=".ui.mine.message.MessageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!-- 修改密码 -->
+        <activity
+            android:name=".ui.mine.setting.updatepassword.UpdatePasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <!-- 意见反馈 -->
+        <activity
+            android:name=".ui.mine.setting.feedback.FeedbackActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!-- 修改求职意向 -->
+        <activity
+            android:name=".ui.mine.resume.edu_exp.reset.ResetJobIntentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <!-- 添加工作经历 -->
+        <activity
+            android:name=".ui.mine.resume.edu_exp.reset.WorkExpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <!-- 项目详情 -->
+        <activity
+            android:name=".ui.projectdetail.ProjectDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!-- 报名成功 -->
+        <activity
+            android:name=".ui.home.attend.AttendSuccessActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!-- 职位信息 -->
+        <activity
+            android:name=".ui.jobdetail.JobDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!-- 单位信息 -->
+        <activity
+            android:name=".ui.unitinfo.UnitInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!-- 单位信息里对应的人才对接 -->
+        <activity
+            android:name=".ui.unitinfo.UnitInfoTalentDockActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!-- 单位信息里对应的项目对接 -->
+        <activity
+            android:name=".ui.unitinfo.UnitInfoProjectdockActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!-- 简历预览页面 -->
+        <activity
+            android:name=".ui.mine.resume.ResumePreviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!-- 取得成果详情 -->
+        <activity
+            android:name=".ui.generalIntroduction.fragment.childfragment.meetinginfo.eventreview.AchievementDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!-- 人才对接筛选 -->
+        <activity
+            android:name=".ui.talentdock.UnitInfoFilterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <!-- 项目对接筛选 -->
+        <activity
+            android:name=".ui.projectdock.ProjectFilterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <!-- 项目管理的编辑项目 -->
+        <activity
+            android:name=".ui.mine.project.EditProjectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.mine.meeting.MeetingDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!-- 大会通知 -->
+        <activity
+            android:name=".ui.notice.ConferenceNoticeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!-- 通知详情 -->
+        <activity
+            android:name=".ui.notice.NoticeDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!-- 图片浏览 -->
+        <activity
+            android:name=".ui.imagebrowse.ImageBrowseActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.FullScreen" />
+        <!-- 教育经历 -->
+        <activity
+            android:name=".ui.mine.resume.edu_exp.reset.EduExpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!-- ShareSDK所需要的 -->
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <data android:scheme="tencent100371282" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <!-- 调用新浪原生SDK，需要注册的回调activity -->
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- 微信分享回调 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity android:name=".widget.CeshiActivity" />
+        <!-- 极光推送自定义广播 -->
+        <receiver
+            android:name=".jpush.CiepReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!-- Required  用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.UNREGISTRATION" />
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!-- Required  用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!-- Required  用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!-- Required  用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" /> <!-- Optional 用户接受Rich Push Javascript 回调函数的intent -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /> <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.qhzk.ciep" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".ui.generalIntroduction.fragment.childfragment.meetinginfo.forum.ForumDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+    </application>
+
+</manifest>

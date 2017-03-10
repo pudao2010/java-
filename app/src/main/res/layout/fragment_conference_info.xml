@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+        <RadioGroup
+            android:id="@+id/radio_container"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.v7.widget.AppCompatRadioButton
+                android:id="@+id/conference_info"
+                android:background="@drawable/shape_circle_green"
+                android:text="会议\n介绍"
+                style="@style/circle_radio_button" />
+            <android.support.v7.widget.AppCompatRadioButton
+                android:id="@+id/conference_commend"
+                android:background="@drawable/shape_circle_red"
+                android:text="签约\n表彰"
+                style="@style/circle_radio_button" />
+            <android.support.v7.widget.AppCompatRadioButton
+                android:id="@+id/exhibition_map"
+                android:background="@drawable/shape_circle_drakblue"
+                android:text="展馆\n规划"
+                style="@style/circle_radio_button" />
+            <android.support.v7.widget.AppCompatRadioButton
+                android:id="@+id/main_agenda"
+                android:background="@drawable/shape_circle_blue"
+                android:text="主要\n日程"
+                style="@style/circle_radio_button" />
+            <android.support.v7.widget.AppCompatRadioButton
+                android:id="@+id/main_activity"
+                android:background="@drawable/shape_circle_darkgreen"
+                android:text="主要\n活动"
+                style="@style/circle_radio_button" />
+        </RadioGroup>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@color/color_line_color" />
+    <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+</LinearLayout>

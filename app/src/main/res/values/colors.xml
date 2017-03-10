@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0061c0</color>
+    <color name="colorPrimaryDark">#0061c0</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="color_line_color">#ECECEC</color>
+
+    <color name="color_message_text_color">#9f9f9f</color>
+
+    <color name="color_tab_text_color_normal">#666666</color>
+    <color name="color_tab_text_color_selector">#519be4</color>
+
+    <color name="color_text_color">#4b4b4b</color>
+    <color name="color_text_dark_color">#343434</color>
+    <color name="color_text_color_blue">#2e6699</color>
+
+    <color name="color_flag_color">#509ce2</color>
+    <!-- 下拉刷新时，颜色值 -->
+    <color name="swiperefresh_color1">#ff0061c0</color>
+    <color name="swiperefresh_color2">#ffffbb33</color>
+    <color name="swiperefresh_color3">#ffff4444</color>
+    <color name="swiperefresh_color4">#ffaa66cc</color>
+    <color name="list_item_background_pressed">#FCFCFC</color>
+</resources>

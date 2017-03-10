@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_ticket"
+    android:visibility="invisible"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:paddingBottom="12dp"
+    android:paddingTop="12dp">
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/icon_tickets_name"
+        android:drawablePadding="6dp"
+        android:text=""
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/icon_nation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/username"
+        android:layout_marginTop="12dp"
+        android:drawableLeft="@drawable/icon_tickets_national"
+        android:drawablePadding="7dp"
+        android:text="国        籍 ："
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/icon_nation"
+        android:layout_toRightOf="@id/icon_nation"
+        android:text=""
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/icon_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/icon_nation"
+        android:drawableLeft="@drawable/icon_tickets_number"
+        android:drawablePadding="8dp"
+        android:text="参会编号 ："
+        android:textSize="12sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/icon_number"
+        android:layout_toRightOf="@id/icon_number"
+        android:text="AA00000001、AA88888888"
+        android:textSize="12sp"/>
+
+    <ImageView
+        android:id="@+id/icon_qrcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/icon_qrcode"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/icon_qrcode"
+        android:layout_below="@+id/icon_qrcode"
+        android:text="点击二维码可放大"
+        android:textSize="8sp"/>
+
+</RelativeLayout>

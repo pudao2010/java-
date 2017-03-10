@@ -1,0 +1,197 @@
+<resources>
+    <string name="app_name">CIEP</string>
+    <string name="register_email">%s , 感谢您注册 “中国国际人才交流大会” , 请到注册邮箱进行验证 , 验证通过后该帐号即可正常使用 。</string>
+    <!-- 全国省份 -->
+    <string-array name="province">
+        <item>北京市</item>
+        <item>天津市</item>
+        <item>上海市</item>
+        <item>重庆市</item>
+        <item>河北省</item>
+        <item>山西省</item>
+        <item>台湾省</item>
+        <item>辽宁省</item>
+        <item>吉林省</item>
+        <item>黑龙江省</item>
+        <item>江苏省</item>
+        <item>浙江省</item>
+        <item>安徽省</item>
+        <item>福建省</item>
+        <item>江西省</item>
+        <item>山东省</item>
+        <item>河南省</item>
+        <item>湖北省</item>
+        <item>湖南省</item>
+        <item>广东省</item>
+        <item>甘肃省</item>
+        <item>四川省</item>
+        <item>贵州省</item>
+        <item>海南省</item>
+        <item>云南省</item>
+        <item>青海省</item>
+        <item>陕西省</item>
+        <item>广西壮族自治区</item>
+        <item>西藏自治区</item>
+        <item>宁夏回族自治区</item>
+        <item>新疆维吾尔自治区</item>
+        <item>内蒙古自治区</item>
+        <item>澳门特别行政区</item>
+        <item>香港特别行政区</item>
+    </string-array>
+    <!-- 项目类型 -->
+    <string-array name="projecttype">
+        <item>资金需求</item>
+        <item>技术需求</item>
+        <item>人才需求</item>
+        <item>引智需求</item>
+        <item>培训需求</item>
+        <item>服务需求</item>
+        <item>技术受让</item>
+        <item>专家推荐</item>
+        <item>成果推广</item>
+        <item>境外培训</item>
+        <item>第三方服务</item>
+    </string-array>
+    <!-- 单位性质 -->
+    <string-array name="unitproperty">
+        <item>外资(欧美)</item>
+        <item>外资(非欧美)</item>
+        <item>合资</item>
+        <item>国企</item>
+        <item>民营公司</item>
+        <item>上市公司</item>
+        <item>创业公司</item>
+        <item>外企代表处</item>
+        <item>政府机关</item>
+        <item>事业单位</item>
+        <item>非盈利机构</item>
+    </string-array>
+    <!-- 工作性质 -->
+    <string-array name="jobtype">
+        <item>不限</item>
+        <item>兼职</item>
+        <item>全职</item>
+        <item>实习</item>
+    </string-array>
+
+    <!--发布者角色-->
+    <string-array name="publishrole">
+        <item>单位</item>
+        <item>个人</item>
+        <item>不限</item>
+    </string-array>
+
+    <!--到岗时间-->
+    <string-array name="arrivaltime">
+        <item>即刻到岗</item>
+        <item>一周以内</item>
+        <item>一个月</item>
+    </string-array>
+    <!-- 薪资区间 -->
+    <string-array name="salary">
+        <item>不限</item>
+        <item>2k以下</item>
+        <item>2k-5k</item>
+        <item>5k-10k</item>
+        <item>10k-15k</item>
+        <item>15k-25k</item>
+        <item>25k-50k</item>
+        <item>50k以上</item>
+    </string-array>
+
+    <string-array name="state">
+        <item>中国</item>
+        <item>美国</item>
+        <item>日本</item>
+        <item>德国</item>
+        <item>法国</item>
+        <item>西班牙</item>
+        <item>墨西哥</item>
+        <item>葡萄牙</item>
+        <item>韩国</item>
+        <item>朝鲜</item>
+        <item>意大利</item>
+        <item>英国</item>
+        <item>俄罗斯</item>
+        <item>加拿大</item>
+        <item>澳大利亚</item>
+        <item>新加坡</item>
+        <item>马来西亚</item>
+        <item>捷克</item>
+        <item>巴西</item>
+        <item>乌克兰</item>
+    </string-array>
+    <!-- 单位规模 -->
+    <string-array name="scale">
+        <item>少于50人</item>
+        <item>50-150人</item>
+        <item>500-1000人</item>
+        <item>1000-5000人</item>
+        <item>5000-10000人</item>
+        <item>10000人以上</item>
+    </string-array>
+    <!-- 工作经验 -->
+    <string-array name="workyear">
+        <item>应届毕业生</item>
+        <item>3年及以下</item>
+        <item>3-5年</item>
+        <item>5-10年</item>
+        <item>10年以上</item>
+        <item>不要求</item>
+    </string-array>
+    <!-- 学历学位 -->
+    <string-array name="degree">
+        <item>初中及以下</item>
+        <item>高中</item>
+        <item>中技</item>
+        <item>中专</item>
+        <item>大专</item>
+        <item>本科</item>
+        <item>硕士</item>
+        <item>MBA</item>
+        <item>博士</item>
+    </string-array>
+    <!--所学专业-->
+    <string-array name="major">
+        <item>哲学</item>
+        <item>经济学</item>
+        <item>管理学</item>
+        <item>文学</item>
+        <item>工学</item>
+        <item>法学</item>
+        <item>历史学</item>
+        <item>理学</item>
+        <item>教育学</item>
+        <item>医学</item>
+        <item>农学</item>
+    </string-array>
+    <!-- 行业领域 -->
+    <string-array name="territory">
+        <item>农、林、牧、渔业</item>
+        <item>采矿业</item>
+        <item>制造业</item>
+        <item>电力、热力、燃气及水生产和供应业</item>
+        <item>建筑业</item>
+        <item>批发和零售业</item>
+        <item>交通运输、仓储和邮政业</item>
+        <item>住宿和餐饮业</item>
+        <item>信息传输、软件和信息技术服务业</item>
+        <item>金融业</item>
+        <item>房地产业</item>
+        <item>租赁和商务服务业</item>
+        <item>科学研究和技术服务业</item>
+        <item>水利、环境和公共设施管理业</item>
+        <item>居民服务、修理和其他服务业</item>
+        <item>教育</item>
+        <item>卫生和社会工作</item>
+        <item>文化、体育和娱乐业</item>
+        <item>公共管理、社会保障和社会组织</item>
+        <item>国际组织</item>
+        <item>政府、非盈利机构</item>
+        <item>其他</item>
+    </string-array>
+    <string name="title_activity_unit_info_projectdock">UnitInfoProjectdockActivity</string>
+    <string name="comment_hint">请输入评论</string>
+    <string name="send_hint">发送</string>
+
+</resources>

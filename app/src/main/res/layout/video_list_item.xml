@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="2dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/video_preview"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:src="@mipmap/mine_backgroud" />
+            <ImageView
+                android:layout_centerInParent="true"
+                android:src="@drawable/play_video"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/video_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#3E77BE"
+            android:textSize="12sp"
+            android:layout_marginLeft="10dp"
+            android:text="重温2016大会议程" />
+
+        <TextView
+            android:textSize="10sp"
+            android:id="@+id/video_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="2016-12-16" />
+    </LinearLayout>
+
+</FrameLayout>

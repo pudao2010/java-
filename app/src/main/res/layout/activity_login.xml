@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/login_backgroud"
+    tools:context=".ui.login.LoginActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/transparent"
+            app:navigationIcon="@drawable/icon_arrow_back"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="登录"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/title_text_size"/>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/logo"/>
+
+        <LinearLayout
+            android:id="@+id/layout_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/logo"
+            android:layout_marginLeft="28dp"
+            android:layout_marginRight="28dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/login_frame_shape"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="12dp"
+                android:src="@drawable/icon_user"/>
+
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"/>
+
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:background="@null"
+                android:hint="请输入电子邮箱地址"
+                android:inputType="textEmailAddress"
+                android:maxLength="54"
+                android:maxLines="1"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:textCursorDrawable="@null"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_passwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_username"
+            android:layout_marginLeft="28dp"
+            android:layout_marginRight="28dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/login_frame_shape"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="12dp"
+                android:src="@drawable/icon_passwd"/>
+
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"/>
+
+            <EditText
+                android:id="@+id/passwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:background="@null"
+                android:hint="6-25位字母、数字或下划线"
+                android:inputType="textPassword"
+                android:maxLength="25"
+                android:maxLines="1"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:textCursorDrawable="@null"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/layout_passwd"
+            android:layout_marginLeft="28dp"
+            android:layout_marginRight="28dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/login_button_frame_shape"
+            android:text="登录"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"/>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/login"
+            android:layout_marginLeft="38dp"
+            android:layout_marginRight="38dp"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:id="@+id/register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="注册"
+                android:textColor="#fe1204"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/reset_passwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="忘记密码?"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"/>
+
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <TextView
+                android:id="@+id/third"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:drawableLeft="@drawable/icon_left_by_line"
+                android:drawablePadding="12dp"
+                android:drawableRight="@drawable/icon_right_by_line"
+                android:text="第三方登录"
+                android:textColor="#c9c9c9"/>
+
+            <ImageView
+                android:id="@+id/wechat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/third"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="18dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/icon_wechat"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

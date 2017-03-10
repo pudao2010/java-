@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/radio_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:layout_marginRight="50dp"
+            android:id="@+id/forum_info"
+            style="@style/circle_radio_button"
+            android:background="@drawable/shape_circle_green"
+            android:text="论坛\n介绍" />
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:id="@+id/forum_agenda"
+            style="@style/circle_radio_button"
+            android:background="@drawable/shape_circle_blue"
+            android:text="论坛\n议程" />
+    </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@color/color_line_color" />
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

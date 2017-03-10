@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_unit_info_filter"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.qhzk.ciep.ui.mine.project.EditProjectActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:navigationIcon="@drawable/icon_arrow_back"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="编辑项目"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/title_text_size" />
+
+            <TextView
+                android:id="@+id/tootbar_right_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="15dp"
+                android:text="保存"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/title_text_size" />
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.qhzk.ciep.widget.MineItemEdit
+                android:id="@+id/project_name"
+                app:itemEditKey="项目名称"
+                app:itemEditHint="项目名"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <com.qhzk.ciep.widget.MineItemView
+                android:id="@+id/project_category"
+                app:itemKey="项目类别"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <com.qhzk.ciep.widget.MineItemView
+                android:id="@+id/industry_field"
+                app:itemKey="行业领域"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <com.qhzk.ciep.widget.MineItemEdit
+                android:id="@+id/project_contact"
+                app:itemEditKey="项目联系人"
+                app:itemEditHint="联系人"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <com.qhzk.ciep.widget.MineItemEdit
+                android:id="@+id/contact_title"
+                app:itemEditKey="联系人职务"
+                app:itemEditHint="职务"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <com.qhzk.ciep.widget.MineItemEdit
+                android:id="@+id/contact_mobile"
+                app:itemEditKey="手        机"
+                app:itemEditHint="手机号"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <com.qhzk.ciep.widget.MineItemEdit
+                android:id="@+id/contact_phone"
+                app:itemEditKey="座        机"
+                app:itemEditHint="座机号"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <com.qhzk.ciep.widget.MineItemEdit
+                android:id="@+id/contact_email"
+                app:itemEditKey="电子邮箱"
+                app:itemEditHint="邮箱号"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <com.qhzk.ciep.widget.MineItemEdit
+                android:id="@+id/contact_fax"
+                app:itemEditKey="传       真"
+                app:itemEditHint="传真号"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/color_line_color" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="项目介绍" />
+
+                <TextView
+                    android:id="@+id/number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="0/500" />
+            </RelativeLayout>
+
+            <EditText
+                android:layout_margin="5dp"
+                android:id="@+id/desc"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:maxLength="500"
+                android:background="@null"
+                android:gravity="top"
+                android:hint="请输入项目介绍"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+

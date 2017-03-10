@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardCornerRadius="2dp"
+    app:cardElevation="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="美术设计师UI设计师"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="2016-12-23" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_job_company"
+                android:drawablePadding="12dp"
+                android:gravity="center"
+                android:text="枣庄市金恒通农业新能源科技有限公司"
+                android:textColor="@color/color_text_color"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/industry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/name"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="4dp"
+                android:drawableLeft="@drawable/icon_job_category"
+                android:drawablePadding="12dp"
+                android:text="能源与环保"
+                android:textColor="@color/color_text_color"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

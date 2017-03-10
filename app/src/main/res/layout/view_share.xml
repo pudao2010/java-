@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical">
+    <TextView
+        android:textSize="18sp"
+        android:textColor="@android:color/holo_blue_light"
+        android:gravity="center"
+        android:text="分享到"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:paddingTop="10dp"
+        android:paddingBottom="20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/share_wechat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/share_icon_wechat"
+            android:gravity="center"
+            android:text="微信" />
+
+        <TextView
+            android:id="@+id/share_friends"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/share_icon_wechatfriends"
+            android:gravity="center"
+            android:text="朋友圈" />
+
+        <TextView
+            android:id="@+id/share_weibo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/share_icon_sinaweibo_a"
+            android:gravity="center"
+            android:text="微博" />
+
+        <TextView
+            android:id="@+id/share_qq"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/share_icon_qq"
+            android:gravity="center"
+            android:text="QQ" />
+    </LinearLayout>
+
+</LinearLayout>

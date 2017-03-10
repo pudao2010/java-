@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="职位描述"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <View
+            android:background="@android:color/holo_blue_light"
+            android:layout_width="60dp"
+            android:layout_height="2dp"/>
+        <TextView
+            android:id="@+id/job_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <View
+        android:background="@color/color_line_color"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"/>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="岗位职责"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <View
+            android:background="@android:color/holo_blue_light"
+            android:layout_width="60dp"
+            android:layout_height="2dp"/>
+        <TextView
+            android:id="@+id/other_require"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>

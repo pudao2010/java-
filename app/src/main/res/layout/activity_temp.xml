@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+       <FrameLayout
+           android:id="@+id/content"
+           android:layout_weight="1"
+           android:layout_width="match_parent"
+           android:layout_height="0dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="@color/color_line_color"/>
+        <RadioGroup
+            android:padding="4dp"
+            android:id="@+id/radio_container"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <RadioButton
+                android:id="@+id/icon_home"
+                android:textColor="@drawable/tab_radiobutton_color_selector"
+                android:gravity="center"
+                android:text="首页"
+                android:textSize="12sp"
+                android:drawableTop="@drawable/selector_icon_home"
+                android:button="@null"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+            <RadioButton
+                android:textColor="@drawable/tab_radiobutton_color_selector"
+                android:textSize="12sp"
+                android:id="@+id/icon_plate"
+                android:gravity="center"
+                android:text="大会板块"
+                android:drawableTop="@drawable/selector_icon_plate"
+                android:button="@null"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+            <RadioButton
+                android:textColor="@drawable/tab_radiobutton_color_selector"
+                android:textSize="12sp"
+                android:id="@+id/icon_ticket"
+                android:gravity="center"
+                android:text="展票"
+                android:drawableTop="@drawable/selector_icon_voucher"
+                android:button="@null"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+            <RadioButton
+                android:textColor="@drawable/tab_radiobutton_color_selector"
+                android:textSize="12sp"
+                android:id="@+id/icon_mine"
+                android:gravity="center"
+                android:text="我的"
+                android:drawableTop="@drawable/selector_icon_mine"
+                android:button="@null"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

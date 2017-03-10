@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:clickable="true"
+    android:padding = "8dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <CheckBox
+        android:focusableInTouchMode="false"
+        android:focusable="false"
+        android:id="@+id/child_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@drawable/drawable_radio_selector"
+        android:gravity="center"
+        android:text="首届深圳管理会计论坛"
+        android:textColor="#000000"
+        android:textSize="14sp" />
+</LinearLayout>

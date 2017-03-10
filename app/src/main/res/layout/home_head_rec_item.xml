@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/button"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="14dp"
+    android:background="@android:color/transparent"
+    android:clickable="true"
+    android:drawablePadding="3dp"
+    android:gravity="center"
+    android:textColor="@color/color_text_color"
+    android:textSize="12sp" />

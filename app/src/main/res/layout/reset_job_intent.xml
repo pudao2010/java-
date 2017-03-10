@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.qhzk.ciep.widget.MineItemEdit
+        android:id="@+id/keyword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemEditHint="请输入"
+        app:itemEditKey="关键词" />
+
+    <com.qhzk.ciep.widget.MineItemView
+        android:id="@+id/location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemKey="地    点" />
+    <com.qhzk.ciep.widget.MineItemView
+        android:id="@+id/industry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemKey="行    业" />
+    <com.qhzk.ciep.widget.MineItemEdit
+        android:id="@+id/position"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemEditHint="请输入"
+        app:itemEditKey="职位名称" />
+    <com.qhzk.ciep.widget.MineItemView
+        android:id="@+id/jobtype"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemKey="工作类型" />
+    <com.qhzk.ciep.widget.MineItemView
+        android:id="@+id/salary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemKey="期望薪资" />
+    <com.qhzk.ciep.widget.MineItemView
+        android:id="@+id/arrival_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemKey="到岗时间" />
+</merge>

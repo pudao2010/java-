@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ececec"
+    tools:context=".ui.register.RegisterSuccessActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:navigationIcon="@drawable/icon_arrow_back"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="注册"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/title_text_size"/>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="46dp"
+            android:background="@drawable/frame_r_w_shape"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="22dp"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:paddingTop="32dp">
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_register_success"/>
+
+            <TextView
+                android:id="@+id/activity_register_success_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:text="@string/register_email"
+                android:textColor="#373737"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/register_finish"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_below="@id/layout"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/frame_r_b_shape"
+            android:text="完成"
+            android:textColor="@android:color/white"/>
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

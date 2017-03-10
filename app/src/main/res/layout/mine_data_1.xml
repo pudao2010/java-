@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.qhzk.ciep.widget.MineItemEdit
+        android:id="@+id/chinese_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemEditHint="请输入"
+        app:itemEditKey="中文姓名" />
+
+    <com.qhzk.ciep.widget.MineItemEdit
+        android:id="@+id/english_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemEditHint="请输入"
+        app:itemEditKey="英文姓名" />
+
+    <com.qhzk.ciep.widget.MineItemView
+        android:id="@+id/country"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemKey="国    籍" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="13dp"
+        android:paddingLeft="13dp"
+        android:paddingTop="13dp">
+
+        <TextView
+            android:id="@+id/mine_star_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="*"
+            android:textColor="#ff2828"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@id/mine_star_4"
+            android:text="性    别"
+            android:textColor="@color/color_text_color"
+            android:textSize="14sp" />
+
+        <RadioGroup
+            android:id="@+id/layout_radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/woman"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/drawable_radio_selector"
+                android:gravity="center"
+                android:text="女"
+                android:textColor="#969696"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/man"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:button="@drawable/drawable_radio_selector"
+                android:checked="true"
+                android:gravity="center"
+                android:text="男"
+                android:textColor="#969696"
+                android:textSize="14sp" />
+        </RadioGroup>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/color_line_color" />
+
+    <com.qhzk.ciep.widget.MineItemView
+        android:id="@+id/birthday"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemKey="出生年月" />
+
+    <com.qhzk.ciep.widget.MineItemEdit
+        android:id="@+id/mobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemEditHint="请输入"
+        app:itemEditKey="联系电话" />
+
+    <com.qhzk.ciep.widget.MineItemEdit
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemEditHint="请输入"
+        app:itemEditKey="电子邮箱" />
+
+    <com.qhzk.ciep.widget.MineItemEdit
+        android:id="@+id/work_unit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemEditHint="请输入"
+        app:itemEditKey="工作单位" />
+
+    <com.qhzk.ciep.widget.MineItemEdit
+        android:id="@+id/work_position"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemEditHint="请输入"
+        app:itemEditKey="职    位" />
+
+    <com.qhzk.ciep.widget.MineItemView
+        android:id="@+id/unit_nature"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemKey="单位性质" />
+
+    <com.qhzk.ciep.widget.MineItemView
+        android:id="@+id/unit_size"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemKey="单位规模" />
+
+    <com.qhzk.ciep.widget.MineItemEdit
+        android:id="@+id/college"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemEditHint="请输入"
+        app:itemEditKey="毕业学院" />
+
+    <com.qhzk.ciep.widget.MineItemView
+        android:id="@+id/degree"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemKey="学历学位" />
+
+    <com.qhzk.ciep.widget.MineItemView
+        android:id="@+id/major"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemKey="所学专业" />
+
+    <com.qhzk.ciep.widget.MineItemView
+        android:id="@+id/industry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemKey="行业领域" />
+
+    <com.qhzk.ciep.widget.MineItemEdit
+        android:id="@+id/language"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemEditHint="请输入"
+        app:itemEditKey="掌握语言" />
+</merge>

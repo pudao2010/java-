@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.mine.resume.edu_exp.reset.ResetEduExpActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:navigationIcon="@drawable/icon_arrow_back"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="教育经历"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/title_text_size" />
+
+            <TextView
+                android:id="@+id/toolbar_right_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="16dp"
+                android:text="保存"
+                android:textColor="@android:color/white" />
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/mine_reset_edu_1" />
+
+        <include layout="@layout/reset_job_intent2"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_marginLeft="14dp"
+            android:background="#dedede" />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/word"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/frame_w_shape"
+            android:gravity="top"
+            android:hint="最多输入500字"
+            android:maxLength="500"
+            android:textColorHint="#9c9c9c"
+            android:textSize="14sp" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,86 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="actionBarSize">@dimen/actionBarSize</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <!-- 引导页全屏 -->
+    <style name="AppTheme.FullScreen" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@drawable/start_window</item>
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <!-- popup底部弹出动画 -->
+    <style name="popupWindow">
+        <item name="android:windowEnterAnimation">@anim/popup_bottom_enter</item>
+        <item name="android:windowExitAnimation">@anim/popup_bottom_exit</item>
+    </style>
+
+    <style name="circle_view">
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_width">60dp</item>
+    </style>
+    <!--大会介绍的圆形radiobutton-->
+    <style name="circle_radio_button">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:button">@null</item>
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">60dp</item>
+    </style>
+
+    <!-- ////////////////////////////////////////////////////////////////-->
+    <!-- 弹出框动画 由下至上 -->
+    <style name="dialogStyle" parent="@android:style/Animation.Dialog">
+        <item name="@android:windowEnterAnimation">@anim/dialog_enter</item>
+        <!-- 进入时的动画 -->
+        <item name="@android:windowExitAnimation">@anim/dialog_exit</item>
+        <!-- 退出时的动画 -->
+    </style>
+
+    <!-- 对话框样式 -->
+    <style name="Theme.Light.Dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:scrollHorizontally">true</item>
+    </style>
+    <!--//////////////////////////////////////////////////////////////////////////-->
+    <style name="comment_dialog" parent="@style/Theme.AppCompat.DayNight.Dialog.Alert">
+        <item name="android:windowTitleStyle">@style/RtlOverlay.DialogWindowTitle.AppCompat</item>
+        <item name="android:windowTitleBackgroundStyle">
+            @style/Base.DialogWindowTitleBackground.AppCompat
+        </item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@style/Animation.AppCompat.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowActionModeOverlay">true</item>>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+</resources>

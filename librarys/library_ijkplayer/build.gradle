@@ -1,0 +1,34 @@
+apply plugin: 'com.android.library'
+
+def config = rootProject.ext.configuration
+def libs = rootProject.ext.librarys
+
+android {
+    compileSdkVersion config.compileSdkVersion
+    buildToolsVersion config.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion config.minSdkVersion
+        targetSdkVersion config.targetSdkVersion
+        versionCode config.versionCode
+        versionName config.versionName
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled config.minifyEnabled
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile "com.android.support:appcompat-v7:${libs.support}"
+    compile "tv.danmaku.ijk.media:ijkplayer-java:${libs.ijkplayer}"
+    compile "tv.danmaku.ijk.media:ijkplayer-exo:${libs.ijkplayer}"
+    compile "tv.danmaku.ijk.media:ijkplayer-armv5:${libs.ijkplayer}"
+    compile "tv.danmaku.ijk.media:ijkplayer-armv7a:${libs.ijkplayer}"
+    compile "tv.danmaku.ijk.media:ijkplayer-arm64:${libs.ijkplayer}"
+    compile "tv.danmaku.ijk.media:ijkplayer-x86:${libs.ijkplayer}"
+}
